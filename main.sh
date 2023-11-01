@@ -11,7 +11,7 @@ do
   echo "Entrando no servidor: $ipServidor"
   
   # Transfere o arquivo .py temporariamente e apaga após executar
-  scp $script_python root@$ipServidor:/tmp/
+  scp $scriptpy root@$ipServidor:/tmp/
   ssh root@$ipServidor 'python3 /tmp/'$scriptpy
   ssh root@$ipServidor 'rm /tmp/'$scriptpy
 done
